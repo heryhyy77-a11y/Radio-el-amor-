@@ -1,1 +1,51 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RADIO EL AMOR</title>
+<style>
+body {
+  background: #190d24;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  padding: 25px;
+}
+h1 { color: #ff75c8; }
+button {
+  background: #d52b91;
+  color: white;
+  padding: 15px;
+  border: 0;
+  border-radius: 12px;
+  margin: 8px;
+}
+audio { width: 100%; margin-top: 20px; }
+input {
+  padding: 12px;
+  width: 90%;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<h1>❤️ RADIO EL AMOR ❤️</h1>
+<h2>📻 Tu radio por internet</h2>
+<p>👩 Asistente mujer</p>
+<p>👨 Asistente hombre</p>
+<h3>🎵 Música para todos</h3>
+<input id="url" placeholder="Enlace de audio">
+<br>
+<button onclick="playRadio()">▶ ESCUCHAR</button>
+<audio id="radio" controls></audio>
+<script>
+function playRadio() {
+  let audio = document.getElementById('radio');
+  audio.src = document.getElementById('url').value;
+  audio.play();
+}
+</script>
+</body>
+</html>
